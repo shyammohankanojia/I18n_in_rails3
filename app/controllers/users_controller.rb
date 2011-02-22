@@ -8,12 +8,13 @@ class UsersController < ApplicationController
   end
    def create
      @user =User.new(params[:user])
-     if @user
-      @user.save
+     if @user.save
       redirect_to :action =>'index'
-     end
-
+      else
+      redirect_to :action =>'new'
+      end
    end
+
    def user_list
     @users =User.find :all
    end
