@@ -1,0 +1,25 @@
+
+<% form_for @user do |f| %>
+<p>
+<%= t("user.name") %>
+<br />
+<%= f.text_field :name %>
+</p>
+<p>
+<%= t("user.email") %>
+<br />
+<%= f.text_field :email %>
+</p>
+<p>
+<%= t("user.address") %>
+<br />
+<%= f.text_area :address ,:cols =>50 ,:rows =>5 %>
+</p>
+<p>
+<%= submit_tag t("user.save")%>
+</p>
+<% end %>
+<br/>
+<br/>
+<br/>
+<%= link_to("Back",{:action =>'index'})%>

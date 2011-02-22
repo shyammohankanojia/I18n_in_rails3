@@ -1,0 +1,9 @@
+<% for user in @users %>
+Name : <%= user.name %><br/>
+Email : <%= user.email %><br/>
+Address : <%= user.address %><br/>
+<br/>
+<br/>
+<br/>
+<% end %>
+<%= link_to("Back",{:action =>'index'})%>
